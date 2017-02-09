@@ -21,14 +21,18 @@ class LinkCreate extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleFormSubmit.bind(this)}>
-        <div className="form-group">
-          <label>Link to shorten</label>
-          <input className="form-control" ref="link" />
+      <div className="link-create container">
+        <div className="col-sm-3">
+          <form onSubmit={this.handleFormSubmit.bind(this)}>
+            <div className="form-group">
+              <label>Link to shorten</label>
+              <input className="form-control" ref="link" />
+            </div>
+            <div className="text-danger">{this.state.error}</div>
+            <button className="btn btn-primary">Shorten</button>
+          </form>
         </div>
-        <div className="text-danger">{this.state.error}</div>
-        <button className="btn btn-primary">Shorten</button>
-      </form>
+      </div>
     );
   }
 }

@@ -20,8 +20,8 @@ class LinkList extends Component {
 
   render() {
     return (
-      <div className="link-list">
-        <table className="table">
+      <div className="link-list container">
+        <table className="table table-striped">
           <thead>
             <tr>
               <th>URL</th>
